@@ -52,20 +52,6 @@ width: 90%;
 
 `
 
-export const Price = styled.p`
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 32px;
-line-height: 160%;
-
-text-align: center;
-
-
-color: #82F3FF;
-`
-
 export const Button = styled.button`
 font-family: 'Poppins';
 font-size: 14px;
@@ -125,7 +111,7 @@ right: 7px;
 top: 3px;
 `
 
-export const MorePrice = styled.button`
+export const Price = styled.button`
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     display: flex;
@@ -144,7 +130,7 @@ export const MorePrice = styled.button`
     }
 `
 
-export const Input = styled.input`
+export const Name = styled.input`
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;

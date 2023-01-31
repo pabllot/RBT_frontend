@@ -1,6 +1,6 @@
 import React, {useEffect, useState } from 'react'
 import Quantity from '../Quantity/Quantity';
-import { Button, CloseButton, Desc, Image, Input, MoreDetails, MorePrice, Price, Title, Wrapper } from './styles'
+import { Button, CloseButton, Desc, Image, MoreDetails, Name, Price, Title, Wrapper } from './styles'
 
 interface Props {
     image: string;
@@ -20,7 +20,7 @@ const Card = ({image, title, Mprice, XGprice, Gprice, desc, id}: Props) => {
     const [name, setName] = useState('')
     const [form, setForm] = useState({
         name: '',
-        pizzaId: 1,
+        pizzaId: id,
         price: 0,
         quantity: 1
     })
@@ -28,14 +28,20 @@ const Card = ({image, title, Mprice, XGprice, Gprice, desc, id}: Props) => {
     
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        setForm({
-            name: name,
-            pizzaId: id,
-            price: pizzaSize,
-            quantity: total
-        })
+      console.log(form)
     }
 
+    const handleChange = (e: any) => {
+        setForm({...form, [e.target.name]: e.target.value})
+      }
+    
+    const handlePrice = (price: number) => {
+    setForm({...form, price: price})      
+    }
+
+    const handleQuantity = (qtd: number) => {
+        setForm({...form, quantity: qtd})  
+    }
 
 
     return (
@@ -47,11 +53,11 @@ const Card = ({image, title, Mprice, XGprice, Gprice, desc, id}: Props) => {
             {!moreDetails && <Button onClick={()=>setMoreDetails(true)}>Ver mais</Button>}
     {moreDetails && 
         <MoreDetails>
-            <MorePrice onClick={()=>setPizzaSize(Mprice)}>M R$ {Mprice},00</MorePrice>
-            <MorePrice onClick={()=>setPizzaSize(Gprice)}>G R$ {Gprice},00</MorePrice>
-            <MorePrice onClick={()=>setPizzaSize(XGprice)}>XG R$ {XGprice},00</MorePrice>
-            <Quantity total={total} setTotal={setTotal} />
-            <Input placeholder='Nome' type='text' value={name} onChange={(e)=>setName(e.target.value)}/>
+            <Price onClick={()=>handlePrice(Mprice)}>M R$ {Mprice},00</Price>
+            <Price onClick={()=>handlePrice(Gprice)}>G R$ {Gprice},00</Price>
+            <Price onClick={()=>handlePrice(XGprice)}>XG R$ {XGprice},00</Price>
+            <Quantity total={total} setTotal={setTotal} handleQuantity={handleQuantity} />
+            <Name placeholder='Nome' name='name' type='text' defaultValue={form.name} onChange={handleChange}/>
             <Button onClick={handleSubmit}>Confirmar</Button>
             <CloseButton onClick={()=>setMoreDetails(false)}>X</CloseButton>
         </MoreDetails>
