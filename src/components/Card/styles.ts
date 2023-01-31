@@ -16,6 +16,7 @@ border-radius: 8px;
 color: white;
 
 margin-top: 20px;
+margin-bottom: 30px;
 
 `
 export const Image = styled.img`
