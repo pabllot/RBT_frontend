@@ -70,6 +70,8 @@ height: 48px;
 background: #750310;
 border-radius: 5px;
 color: white;
+border: none;
+
 
 cursor: pointer;
 `
@@ -103,6 +105,7 @@ font-weight: 700;
 background: white;
 border-radius: 50%;
 color: #750310;
+border: none;
 
 cursor: pointer;
 
@@ -123,6 +126,8 @@ export const Price = styled.button`
     cursor: pointer;
     border-radius: 5px;
     color: #750310;
+    border: none;
+
 
     &:focus {
         background: green;
