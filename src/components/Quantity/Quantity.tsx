@@ -1,12 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container, P, Sign } from './styles'
 
 interface Props {
     total: number;
     setTotal: any;
+    handleQuantity: any
   }
 
-const Quantity = ({total, setTotal}: Props) => {
+
+
+const Quantity = ({total, setTotal, handleQuantity}: Props) => {
+  useEffect(() => {
+    handleQuantity(total)
+  }, [total])
 
   return (
     <Container>
