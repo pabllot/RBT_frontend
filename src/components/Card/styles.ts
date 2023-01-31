@@ -121,8 +121,8 @@ color: #750310;
 cursor: pointer;
 
 position: absolute;
-right: 3px;
-top: 0;
+right: 7px;
+top: 3px;
 `
 
 export const MorePrice = styled.button`
@@ -142,4 +142,16 @@ export const MorePrice = styled.button`
         background: green;
         color: white;
     }
+`
+
+export const Input = styled.input`
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    outline: none;
+    width: 50%;
+    height: 24px;
+    border: none;
+    border-radius: 3px;
+    padding: 2px;
 `
