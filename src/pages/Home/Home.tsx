@@ -21,7 +21,7 @@ useEffect(() => {
   return (
     <Container>
     {allPizzas?.map((pizza: any) => (
-        <Card key={pizza.id} image={pizza.image} title={pizza.name} price={pizza.small_price} desc={pizza.ingredients} id={pizza.id}/>
+        <Card key={pizza.id} image={pizza.image} title={pizza.name} Mprice={pizza.small_price} Gprice={pizza.medium_price} XGprice={pizza.big_price} desc={pizza.ingredients} id={pizza.id}/>
     ))}
     </Container>
   )

@@ -87,16 +87,31 @@ cursor: pointer;
 
 `
 export const MoreDetails = styled.div`
-    position: absolute;
-    height: 70vh;
-    width: 100%;
     background: #00070A;
-    top: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 304px;
+    background: #00070A;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    gap: 4px;
     `
 
-export const MoreImage = styled.img``
+export const MorePrice = styled.button`
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 40px;
+    background: #750310;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
 
-export const MoreDesc = styled.div``
+    &:focus {
+        background: green;
+    }
+`
