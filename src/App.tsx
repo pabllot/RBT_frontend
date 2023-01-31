@@ -1,8 +1,12 @@
 import React from 'react'
+import Navbar from './components/Navbar/Navbar'
+import { Container } from './styles'
 
 const App = () => {
   return (
-    <div>App</div>
+    <Container>
+      <Navbar />
+    </Container>
   )
 }
 
