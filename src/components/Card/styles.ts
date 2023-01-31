@@ -20,8 +20,8 @@ margin-top: 20px;
 `
 export const Image = styled.img`
     width: 176px;
-    height: 176px;
     object-fit: contain;
+    border-radius: 50%;
 `
 
 export const Title = styled.h1`
@@ -48,6 +48,7 @@ text-align: center;
 
 
 color: #C4C4CC;
+width: 90%;
 
 `
 
@@ -67,14 +68,15 @@ color: #82F3FF;
 
 export const Button = styled.button`
 font-family: 'Poppins';
+font-size: 14px;
+font-weight: 500;
 display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
 padding: 12px 24px;
-gap: 8px;
 
-width: 92px;
+width: 50%;
 height: 48px;
 
 
@@ -84,7 +86,6 @@ border-radius: 5px;
 color: white;
 
 cursor: pointer;
-
 `
 export const MoreDetails = styled.div`
     background: #00070A;
@@ -97,21 +98,48 @@ export const MoreDetails = styled.div`
     align-items: center;
     justify-content: space-around;
     gap: 4px;
+    position: relative;
+    padding-bottom: 10px;
     `
+export const CloseButton = styled.button`
+font-family: 'Poppins';
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px 10px;
+
+width: 5px;
+height: 5px;
+font-size: 14px;
+font-weight: 700;
+
+
+background: white;
+border-radius: 50%;
+color: #750310;
+
+cursor: pointer;
+
+position: absolute;
+right: 3px;
+top: 0;
+`
 
 export const MorePrice = styled.button`
     font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50%;
-    height: 40px;
-    background: #750310;
+    height: 48px;
+    background: white;
     cursor: pointer;
     border-radius: 5px;
-    color: white;
+    color: #750310;
 
     &:focus {
         background: green;
+        color: white;
     }
 `
