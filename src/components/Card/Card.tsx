@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 import Quantity from '../Quantity/Quantity';
 import { Button, CloseButton, Desc, Image, MoreDetails, Name, Price, Title, Wrapper } from './styles'
@@ -18,15 +19,20 @@ const Card = ({image, title, Mprice, XGprice, Gprice, desc, id}: Props) => {
     const [total, setTotal] = useState(1)
     const [form, setForm] = useState({
         name: '',
-        pizzaId: id,
+        pizza: title,
         price: 0,
-        quantity: 1
+        quantity: 1,
+        total: 0,
     })
 
     
-    const handleSubmit = (e: any) => {
+    const handleSubmit = async (e: any) => {
         e.preventDefault();
-      console.log(form)
+
+        await axios.post('http://localhost:8800/pizzas', {
+          form
+        })
+
     }
 
     const handleChange = (e: any) => {

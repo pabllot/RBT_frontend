@@ -64,9 +64,7 @@ align-items: center;
 padding: 12px 24px;
 
 width: 50%;
-height: 48px;
-
-
+height: 35px;
 
 background: #750310;
 border-radius: 5px;
@@ -122,7 +120,7 @@ export const Price = styled.button`
     align-items: center;
     justify-content: center;
     width: 50%;
-    height: 48px;
+    height: 30px;
     background: white;
     cursor: pointer;
     border-radius: 5px;
@@ -142,7 +140,7 @@ export const Name = styled.input`
     font-weight: 500;
     outline: none;
     width: 50%;
-    height: 24px;
+    height: 30px;
     border: none;
     border-radius: 3px;
     padding: 2px;
