@@ -26,7 +26,7 @@ const Card = ({image, title, Mprice, XGprice, Gprice, desc, id}: Props) => {
     })
 
     
-    const handleSubmit = async (e: any) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if(form.name !== null && form.price !== 0){
         await axios.post('http://localhost:8800/pizzas', {
@@ -37,7 +37,7 @@ const Card = ({image, title, Mprice, XGprice, Gprice, desc, id}: Props) => {
       }
     }
 
-    const handleChange = (e: any) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setForm({...form, [e.target.name]: e.target.value})
       }
     
