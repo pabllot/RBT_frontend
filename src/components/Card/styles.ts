@@ -145,3 +145,31 @@ export const Name = styled.input`
     border-radius: 3px;
     padding: 2px;
 `
+
+export const Success = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-top: 15px;
+`
+
+export const H1 = styled.h1`
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+`
+export const Paragraph = styled.p`
+    font-family: 'Poppins', sans-serif;
+    font-size: px;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    
+`
