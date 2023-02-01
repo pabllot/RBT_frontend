@@ -16,12 +16,23 @@ const Admin = () => {
       }
       
       fetchAllOrders()
-  },[])
+  },[allOrders])
 
   const pizzaSize = (price: number) => {
     if(price < 45) return 'M';
     else if(price > 45 && price < 65 ) return 'G'
     else return 'XG'
+  }
+
+  const handleCancel = async (id: number) => {
+    await axios.post('http://localhost:8800/pedidos/cancelados', {
+          id
+        })
+  }
+  const handleComplete = async (id: number) => {
+    await axios.post('http://localhost:8800/pedidos/concluidos', {
+          id
+        })
   }
 
   return (
@@ -31,8 +42,8 @@ const Admin = () => {
         {allOrders.filter((orderr: any) => orderr.status === 1).map((order: any) => (
         <Wrapper>
           <p>{order.name} {order.pizza} {pizzaSize(order.price)} qtd: {order.quantity} total: {order.price * order.quantity}</p>
-          <button>Concluído</button>
-          <button>Cancelar</button>
+          <button onClick={()=>handleComplete(order.id)}>Concluído</button>
+          <button onClick={()=>handleCancel(order.id)}>Cancelar</button>
         </Wrapper>
     ))}
       </Ongoing>
@@ -40,9 +51,7 @@ const Admin = () => {
         <h1 style={{background: 'green'}}>Pedidos Concluídos</h1>
         {allOrders.filter((orderr: any) => orderr.status === 2).map((order: any) => (
         <Wrapper>
-          <p>{order.name} {order.pizza} {pizzaSize(order.price)} qtd: {order.quantity} total: {order.price * order.quantity}</p>
-          <button>Concluído</button>
-          <button>Cancelar</button>
+          <p>{order.name} {order.pizza} {pizzaSize(order.price)} qtd: {order.quantity} total: {order.price * order.quantity}</p>          
         </Wrapper>
     ))}
  
@@ -50,8 +59,6 @@ const Admin = () => {
         {allOrders.filter((orderr: any) => orderr.status === 3).map((order: any) => (
         <Wrapper>
           <p>{order.name} {order.pizza} {pizzaSize(order.price)} qtd: {order.quantity} total: {order.price * order.quantity}</p>
-          <button>Concluído</button>
-          <button>Cancelar</button>
         </Wrapper>
     ))}
       </Ongoing>
