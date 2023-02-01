@@ -20,8 +20,8 @@ export const Wrapper =  styled.div`
 `
 export const Image = styled.img`
     width: 156px;
-    max-height: 100px ;
-    object-fit: contain;
+    height: 100px ;
+    object-fit: cover;
     border-radius: 50%;
     box-shadow: rgba(240,240,240, 0.3) 0px 28px 100px 0px;
 `
