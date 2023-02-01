@@ -1,79 +1,68 @@
 import styled from "styled-components";
 
 export const Wrapper =  styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 24px;
-gap: 15px;
-width: 304px;
-height: 462px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    gap: 15px;
+    width: 304px;
+    height: 462px;
 
-background: #00070A;
-border: 1px solid #000204;
-border-radius: 8px;
+    background: #00070A;
+    border: 1px solid #000204;
+    border-radius: 8px;
 
-color: white;
+    color: white;
 
-margin-top: 20px;
-margin-bottom: 30px;
-
+    margin-top: 20px;
+    margin-bottom: 30px;
 `
 export const Image = styled.img`
-    width: 176px;
+    width: 156px;
+    max-height: 100px ;
     object-fit: contain;
     border-radius: 50%;
     box-shadow: rgba(240,240,240, 0.3) 0px 28px 100px 0px;
 `
 
 export const Title = styled.h1`
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 140%;
-
-text-align: center;
-
-
-color: #E1E1E6;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    text-align: center;
+    color: #E1E1E6;
 `
 
 export const Desc = styled.p`
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 160%;
-
-text-align: center;
-
-
-color: #C4C4CC;
-width: 90%;
-
+    width: 90%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    text-align: center;
+    color: #C4C4CC;
 `
 
 export const Button = styled.button`
-font-family: 'Poppins';
-font-size: 14px;
-font-weight: 500;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 12px 24px;
-
-width: 50%;
-height: 35px;
-
-background: #750310;
-border-radius: 5px;
-color: white;
-border: none;
-
-
-cursor: pointer;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    width: 50%;
+    height: 35px;
+    background: #750310;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
 `
 export const MoreDetails = styled.div`
     background: #00070A;
@@ -90,28 +79,23 @@ export const MoreDetails = styled.div`
     padding-bottom: 10px;
     `
 export const CloseButton = styled.button`
-font-family: 'Poppins';
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 10px 10px;
-
-width: 5px;
-height: 5px;
-font-size: 14px;
-font-weight: 700;
-
-
-background: white;
-border-radius: 50%;
-color: #750310;
-border: none;
-
-cursor: pointer;
-
-position: absolute;
-right: 7px;
-top: 3px;
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    width: 5px;
+    height: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    background: white;
+    border-radius: 50%;
+    color: #750310;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 7px;
+    top: 3px;
 `
 
 export const Price = styled.button`

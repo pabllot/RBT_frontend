@@ -41,7 +41,7 @@ const Admin = () => {
   return (
     <Container>
       <Section>
-        <Title style={{background: '#00070A'}}>Pedidos em Andamento</Title>
+        <Title style={{background: 'white', color: '#8b0000'}}>Pedidos em Andamento</Title>
         {allOrders.filter((orderr: any) => orderr.status === 1).map((order: any) => (
         <WrapperOngoing>
           <Paragraph>{order.name} {order.pizza} {pizzaSize(order.price)} qtd: {order.quantity} total: {order.price * order.quantity}</Paragraph> 

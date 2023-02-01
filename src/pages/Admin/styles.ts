@@ -28,7 +28,6 @@ export const Section = styled.div`
     margin-top: 20px;
     gap: 8px;
     margin-bottom: 20px;
-
 `
 
 export const WrapperOngoing = styled.div`
@@ -42,8 +41,7 @@ export const WrapperOngoing = styled.div`
     padding-left: 4px;
     box-shadow: rgba(255,255,255, 0.3) 0px 1px 3px, black 1px 1px 1px;
 
-    @media only screen and (max-width:700px) {
-    
+    @media only screen and (max-width:700px) {    
     flex-direction: column;
     width: 335px;
 }
@@ -60,12 +58,10 @@ export const Wrapper = styled.div`
     padding-left: 4px;
     box-shadow: rgba(255,255,255, 0.3) 0px 1px 3px, black 1px 1px 1px;
 
-    @media only screen and (max-width:700px) {
-    
+    @media only screen and (max-width:700px) {    
     flex-direction: column;
     width: 335px;
     padding-bottom: 4px;
-
 }
     
 `
@@ -79,8 +75,8 @@ export const Title = styled.h1`
     padding: 1px 8px;
     margin-top: 10px;
     box-shadow: rgba(255,255,255, 0.3) 0px 1px 3px, black 1px 1px 1px;
-    @media only screen and (max-width:700px) {
-    
+
+    @media only screen and (max-width:700px) {    
     font-size: 25px;
     width: 335px;
 }
@@ -116,8 +112,7 @@ export const ButtonWrapper = styled.div`
     gap: 2px;
     
 
-    @media only screen and (max-width:700px) {
-    
+    @media only screen and (max-width:700px) {    
     gap: 5px;
     margin-bottom: 5px;
     background: white;
