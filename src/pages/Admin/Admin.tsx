@@ -32,11 +32,16 @@ const Admin = () => {
           id
         })
   }
+  const handleDelete = async (id: number) => {
+    await axios.post('http://localhost:8800/pedidos/delete', {
+          id
+        })
+  }
 
   return (
     <Container>
       <Section>
-        <Title style={{background: 'white', color: '#8b0000'}}>Pedidos em Andamento</Title>
+        <Title style={{background: '#00070A'}}>Pedidos em Andamento</Title>
         {allOrders.filter((orderr: any) => orderr.status === 1).map((order: any) => (
         <WrapperOngoing>
           <Paragraph>{order.name} {order.pizza} {pizzaSize(order.price)} qtd: {order.quantity} total: {order.price * order.quantity}</Paragraph> 
@@ -52,7 +57,8 @@ const Admin = () => {
         <Title style={{background: '#006400'}}>Pedidos Concluídos</Title>
         {allOrders.filter((orderr: any) => orderr.status === 2).map((order: any) => (
         <Wrapper>
-          <Paragraph>{order.name} {order.pizza} {pizzaSize(order.price)} qtd: {order.quantity} total: {order.price * order.quantity}</Paragraph>          
+          <Paragraph>{order.name} {order.pizza} {pizzaSize(order.price)} qtd: {order.quantity} total: {order.price * order.quantity}</Paragraph>
+          <ButtonCanceled style={{borderLeft: '2px solid #00070A'}} onClick={()=>handleDelete(order.id)}>Delete</ButtonCanceled>          
         </Wrapper>
     ))}
     </Section>
@@ -62,6 +68,7 @@ const Admin = () => {
         {allOrders.filter((orderr: any) => orderr.status === 3).map((order: any) => (
         <Wrapper>
           <Paragraph>{order.name} {order.pizza} {pizzaSize(order.price)} qtd: {order.quantity} total: {order.price * order.quantity}</Paragraph>
+          <ButtonCanceled style={{borderLeft: '2px solid #00070A'}} onClick={()=>handleDelete(order.id)}>Delete</ButtonCanceled>  
         </Wrapper>
     ))}
       </Section>
