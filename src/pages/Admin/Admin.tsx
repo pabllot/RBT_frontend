@@ -44,7 +44,7 @@ const Admin = () => {
         <Title style={{background: '#0040ff'}}>Pedidos em Andamento</Title>
         {allOrders.filter((orderr: any) => orderr.status === 1).map((order: any) => (
         <WrapperOngoing>
-          <Paragraph>{order.name} {order.pizza} {pizzaSize(order.price)} qtd: {order.quantity} total: {order.price * order.quantity}</Paragraph> 
+          <Paragraph>{order.name} {order.quantity} {order.pizza}-{pizzaSize(order.price)} total: R${order.price * order.quantity},00</Paragraph> 
           <ButtonWrapper>
             <ButtonComplete onClick={()=>handleComplete(order.id)}>Concluído</ButtonComplete>
             <ButtonCanceled onClick={()=>handleCancel(order.id)}>Cancelar</ButtonCanceled>
@@ -57,7 +57,7 @@ const Admin = () => {
         <Title style={{background: '#006400'}}>Pedidos Concluídos</Title>
         {allOrders.filter((orderr: any) => orderr.status === 2).map((order: any) => (
         <Wrapper>
-          <Paragraph>{order.name} {order.pizza} {pizzaSize(order.price)} qtd: {order.quantity} total: {order.price * order.quantity}</Paragraph>
+          <Paragraph>{order.name} {order.quantity} {order.pizza}-{pizzaSize(order.price)} total: R${order.price * order.quantity},00</Paragraph>
           <ButtonCanceled onClick={()=>handleDelete(order.id)}>Delete</ButtonCanceled>          
         </Wrapper>
     ))}
@@ -67,7 +67,7 @@ const Admin = () => {
         <Title style={{background: '#8b0000'}}>Pedidos Cancelados</Title>
         {allOrders.filter((orderr: any) => orderr.status === 3).map((order: any) => (
         <Wrapper>
-          <Paragraph>{order.name} {order.pizza} {pizzaSize(order.price)} qtd: {order.quantity} total: {order.price * order.quantity}</Paragraph>
+          <Paragraph>{order.name} {order.quantity} {order.pizza}-{pizzaSize(order.price)} total: R${order.price * order.quantity},00</Paragraph>
           <ButtonCanceled  onClick={()=>handleDelete(order.id)}>Delete</ButtonCanceled>  
         </Wrapper>
     ))}
