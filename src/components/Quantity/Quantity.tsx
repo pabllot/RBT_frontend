@@ -3,13 +3,12 @@ import { Container, P, Sign } from './styles'
 
 interface Props {
     total: number;
-    setTotal: any;
-    handleQuantity: any
+    setTotal: Function;
+    handleQuantity: Function;
   }
 
-
-
 const Quantity = ({total, setTotal, handleQuantity}: Props) => {
+
   useEffect(() => {
     handleQuantity(total)
   }, [total])

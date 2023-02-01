@@ -10,11 +10,10 @@ interface Props {
     Gprice: number;
     XGprice: number;
     desc: string;
-    id: number
   }
   
 
-const Card = ({image, title, Mprice, XGprice, Gprice, desc, id}: Props) => {
+const Card = ({image, title, Mprice, XGprice, Gprice, desc}: Props) => {
     const [moreDetails, setMoreDetails] = useState(false)
     const [total, setTotal] = useState(1)
     const [success, setSuccess] = useState(false)
@@ -26,13 +25,11 @@ const Card = ({image, title, Mprice, XGprice, Gprice, desc, id}: Props) => {
     })
 
     
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
+    const handleSubmit = async () => {
         if(form.name !== null && form.price !== 0){
         await axios.post('http://localhost:8800/pizzas', {
           form
         })
-      
         setSuccess(true)
       }
     }
