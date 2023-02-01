@@ -5,9 +5,11 @@ export const Container = styled.div`
     width: 100%;
     position: fixed;
     top: 0;
+    left: 0;
     background-color: black;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     z-index: 999;
 `
 
@@ -16,4 +18,17 @@ export const Image = styled.img`
     height: 60px;
     object-fit: contain;
     margin-left: 30px;
+`
+
+export const Title = styled.p`
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+`
+
+export const Wrapper = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 5px;
 `
