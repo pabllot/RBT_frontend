@@ -23,6 +23,7 @@ export const Image = styled.img`
     width: 176px;
     object-fit: contain;
     border-radius: 50%;
+    box-shadow: rgba(240,240,240, 0.3) 0px 28px 100px 0px;
 `
 
 export const Title = styled.h1`
@@ -121,7 +122,7 @@ export const Price = styled.button`
     justify-content: center;
     width: 50%;
     height: 30px;
-    background: white;
+    background: rgba(255,255,255, 0.9);
     cursor: pointer;
     border-radius: 5px;
     color: #750310;
@@ -144,6 +145,7 @@ export const Name = styled.input`
     border: none;
     border-radius: 3px;
     padding: 2px;
+    background: rgba(255,255,255, 0.9);
 `
 
 export const Success = styled.div`
@@ -152,7 +154,7 @@ export const Success = styled.div`
     align-items: center;
     justify-content: center;
     width: 80%;
-    background-color: black;
+    background-color: #00070A;
     border: 2px solid white;
     border-radius: 20px;
     margin-top: 15px;
