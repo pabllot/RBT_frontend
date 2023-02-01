@@ -8,6 +8,7 @@ export const Container = styled.div`
     background-color: black;
     display: flex;
     align-items: center;
+    z-index: 999;
 `
 
 export const Image = styled.img`
