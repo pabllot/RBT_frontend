@@ -58,7 +58,7 @@ export const Button = styled.button`
     padding: 12px 24px;
     width: 50%;
     height: 35px;
-    background: #750310;
+    background: #A93335;
     border-radius: 5px;
     color: white;
     border: none;
@@ -79,19 +79,19 @@ export const MoreDetails = styled.div`
     padding-bottom: 10px;
     `
 export const CloseButton = styled.button`
-    font-family: 'Poppins';
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 10px 10px;
-    width: 5px;
-    height: 5px;
-    font-size: 14px;
-    font-weight: 700;
-    background: white;
+    justify-content: center;
+    background: none;
+    border: 2px solid #A93335;
     border-radius: 50%;
-    color: #750310;
-    border: none;
+    padding: 2px;
+    cursor: pointer;
+    color: #A93335;
+    margin-left: 2px;
+    width: 25px;
+    height: 25px;
+    font-size: 21px;
     cursor: pointer;
     position: absolute;
     right: 7px;
@@ -106,10 +106,10 @@ export const Price = styled.button`
     justify-content: center;
     width: 50%;
     height: 30px;
-    background: rgba(255,255,255, 0.9);
+    background: white;
     cursor: pointer;
     border-radius: 5px;
-    color: #750310;
+    color: #A93335;
     border: none;
 
 
@@ -129,7 +129,7 @@ export const Name = styled.input`
     border: none;
     border-radius: 3px;
     padding: 2px;
-    background: rgba(255,255,255, 0.9);
+    background: white;
 `
 
 export const Success = styled.div`

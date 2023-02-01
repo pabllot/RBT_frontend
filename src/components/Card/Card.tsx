@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { RiCloseLine } from 'react-icons/ri'
 import Quantity from '../Quantity/Quantity';
 import { Button, CloseButton, Desc, H1, Image, MoreDetails, Name, Paragraph, Price, Success, Title, Wrapper } from './styles'
 
@@ -64,7 +65,7 @@ const Card = ({image, title, Mprice, XGprice, Gprice, desc}: Props) => {
                   <Price onClick={()=>handlePrice(XGprice)}>XG R$ {XGprice},00</Price>
                   <Quantity total={total} setTotal={setTotal} handleQuantity={handleQuantity} />
                   <Button onClick={handleSubmit}>Confirmar</Button>
-                  <CloseButton onClick={()=>setMoreDetails(false)}>X</CloseButton>
+                  <CloseButton onClick={()=>setMoreDetails(false)}><RiCloseLine/></CloseButton>
                 </>
                 :
                 <Success>
