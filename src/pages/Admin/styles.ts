@@ -27,6 +27,7 @@ export const Section = styled.div`
     color: white;
     margin-top: 20px;
     margin-bottom: 20px;
+    gap: 1px;
 `
 
 export const WrapperOngoing = styled.div`
@@ -38,7 +39,7 @@ export const WrapperOngoing = styled.div`
     color: #8b0000;    
     gap: 6px;
     padding-left: 4px;
-    border-bottom: 2px solid gray;
+    border-bottom: 1px solid gray;
 
     box-shadow: rgba(255,255,255, 0.3) 0px 1px 3px, black 1px 1px 1px;
 
@@ -57,7 +58,6 @@ export const Wrapper = styled.div`
     color: #8b0000;
     gap: 6px;
     padding-left: 4px;
-    border-bottom: 2px solid gray;
     box-shadow: rgba(255,255,255, 0.3) 0px 1px 3px, black 1px 1px 1px;
 
     @media only screen and (max-width:700px) {    
@@ -76,7 +76,8 @@ export const Title = styled.h1`
     width: 440px;
     padding: 1px 8px;
     margin-top: 10px;
-    border-bottom: 2px solid gray;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 
     box-shadow: rgba(255,255,255, 0.3) 0px 1px 3px, black 1px 1px 1px;
 
@@ -96,25 +97,31 @@ export const Paragraph = styled.p`
     font-weight: 500;
     color: black;
     min-height: 20px;
-
 `
 
 export const ButtonComplete = styled.button`
     font-family: 'Poppins', sans-serif;
-    background: #006400;
+    background: white;
     border: none;
     padding: 2px;
     cursor: pointer;
-    color: white;
+    color: green;
     margin-left: 2px;
+    width: 25px;
+    height: 25px;
+    font-size: 17px;
 `
 export const ButtonCanceled = styled.button`
     font-family: 'Poppins', sans-serif;
-    background: #8b0000;
+    background: white;
     border: none;
     padding: 2px;
     cursor: pointer;
-    color: white;
+    color: #A93335;
+    width: 25px;
+    height: 25px;
+    font-size: 17px;
+
 `
 export const ButtonWrapper = styled.div`
     display: flex;
