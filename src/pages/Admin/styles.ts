@@ -6,7 +6,7 @@ export const Container = styled.div`
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
-    gap: 80px;
+    gap: 70px;
 
     @media only screen and (max-width:1400px) {    
         flex-direction: column;
@@ -26,7 +26,6 @@ export const Section = styled.div`
     flex-direction: column;
     color: white;
     margin-top: 20px;
-    gap: 8px;
     margin-bottom: 20px;
 `
 
@@ -39,6 +38,8 @@ export const WrapperOngoing = styled.div`
     color: #8b0000;    
     gap: 6px;
     padding-left: 4px;
+    border-bottom: 2px solid gray;
+
     box-shadow: rgba(255,255,255, 0.3) 0px 1px 3px, black 1px 1px 1px;
 
     @media only screen and (max-width:700px) {    
@@ -56,6 +57,7 @@ export const Wrapper = styled.div`
     color: #8b0000;
     gap: 6px;
     padding-left: 4px;
+    border-bottom: 2px solid gray;
     box-shadow: rgba(255,255,255, 0.3) 0px 1px 3px, black 1px 1px 1px;
 
     @media only screen and (max-width:700px) {    
@@ -74,6 +76,8 @@ export const Title = styled.h1`
     width: 440px;
     padding: 1px 8px;
     margin-top: 10px;
+    border-bottom: 2px solid gray;
+
     box-shadow: rgba(255,255,255, 0.3) 0px 1px 3px, black 1px 1px 1px;
 
     @media only screen and (max-width:700px) {    
@@ -84,9 +88,15 @@ export const Title = styled.h1`
 `
 
 export const Paragraph = styled.p`
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: 500;
+    color: black;
+    min-height: 20px;
+
 `
 
 export const ButtonComplete = styled.button`
@@ -109,7 +119,7 @@ export const ButtonCanceled = styled.button`
 export const ButtonWrapper = styled.div`
     display: flex;
     background: #1E1E1E;
-    gap: 2px;
+    background-color: white;
     
 
     @media only screen and (max-width:700px) {    

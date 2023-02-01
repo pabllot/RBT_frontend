@@ -41,7 +41,7 @@ const Admin = () => {
   return (
     <Container>
       <Section>
-        <Title style={{background: 'white', color: '#8b0000'}}>Pedidos em Andamento</Title>
+        <Title style={{background: '#0040ff'}}>Pedidos em Andamento</Title>
         {allOrders.filter((orderr: any) => orderr.status === 1).map((order: any) => (
         <WrapperOngoing>
           <Paragraph>{order.name} {order.pizza} {pizzaSize(order.price)} qtd: {order.quantity} total: {order.price * order.quantity}</Paragraph> 
@@ -58,7 +58,7 @@ const Admin = () => {
         {allOrders.filter((orderr: any) => orderr.status === 2).map((order: any) => (
         <Wrapper>
           <Paragraph>{order.name} {order.pizza} {pizzaSize(order.price)} qtd: {order.quantity} total: {order.price * order.quantity}</Paragraph>
-          <ButtonCanceled style={{borderLeft: '2px solid #00070A'}} onClick={()=>handleDelete(order.id)}>Delete</ButtonCanceled>          
+          <ButtonCanceled onClick={()=>handleDelete(order.id)}>Delete</ButtonCanceled>          
         </Wrapper>
     ))}
     </Section>
@@ -68,7 +68,7 @@ const Admin = () => {
         {allOrders.filter((orderr: any) => orderr.status === 3).map((order: any) => (
         <Wrapper>
           <Paragraph>{order.name} {order.pizza} {pizzaSize(order.price)} qtd: {order.quantity} total: {order.price * order.quantity}</Paragraph>
-          <ButtonCanceled style={{borderLeft: '2px solid #00070A'}} onClick={()=>handleDelete(order.id)}>Delete</ButtonCanceled>  
+          <ButtonCanceled  onClick={()=>handleDelete(order.id)}>Delete</ButtonCanceled>  
         </Wrapper>
     ))}
       </Section>
