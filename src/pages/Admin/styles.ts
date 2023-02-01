@@ -1,18 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    height: 90vh;
     width: 100%;
+    min-height:90vh;
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
     gap: 80px;
 
-    @media only screen and (max-width:700px) {
-    
+    @media only screen and (max-width:700px) {    
         flex-direction: column;
         align-items: center;
-
     }
 
 
@@ -29,12 +27,35 @@ export const Section = styled.div`
 
 `
 
-export const Wrapper = styled.div`
+export const WrapperOngoing = styled.div`
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 440px;
+    background-color: white;
+    color: #8b0000;    
     gap: 6px;
     @media only screen and (max-width:700px) {
     
     flex-direction: column;
+    width: 335px;
+}
+    
+`
+export const Wrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 440px;
+    background-color: white;
+    color: #8b0000;
+    
+    gap: 6px;
+    @media only screen and (max-width:700px) {
+    
+    flex-direction: column;
+    width: 335px;
+
 }
     
 `
@@ -44,7 +65,7 @@ export const Title = styled.h1`
     font-weight: 400;
     font-size: 35px;
     text-align: center;
-    width: 450px;
+    width: 440px;
     padding: 1px 8px;
     margin-top: 10px;
     margin-bottom: 5px;
@@ -60,7 +81,7 @@ export const Title = styled.h1`
 export const Paragraph = styled.p`
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
-    border-bottom: 2px solid gray;
+    font-weight: 500;
 `
 
 export const ButtonComplete = styled.button`
@@ -78,4 +99,13 @@ export const ButtonCanceled = styled.button`
     padding: 2px;
     cursor: pointer;
     color: white;
+`
+export const ButtonWrapper = styled.div`
+    display: flex;
+
+    @media only screen and (max-width:700px) {
+    
+    gap: 5px;
+    margin-bottom: 5px;
+}
 `
