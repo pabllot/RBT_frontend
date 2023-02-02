@@ -32,3 +32,8 @@ export const Wrapper = styled.div`
     align-items: center;
     gap: 5px;
 `
+
+export const AdminIcon = styled.div`
+    font-size: 30px;
+    color: white;
+`

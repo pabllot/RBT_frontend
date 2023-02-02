@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '/logo.png'
-import { Container, Image, Title, Wrapper } from './styles'
+import { AdminIcon, Container, Image, Title, Wrapper } from './styles'
 import { Link } from 'react-router-dom'
 import { RiAdminLine } from 'react-icons/ri'
 
@@ -14,8 +14,9 @@ const Navbar = () => {
         </Wrapper>
       </Link>
       <Link to='/admin'>
-        <div style={{ fontSize: '30px', color: 'white'}}><RiAdminLine />
-          </div></Link>
+        <AdminIcon>
+          <RiAdminLine />
+        </AdminIcon></Link>
     </Container>
   )
 }
