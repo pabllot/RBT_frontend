@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { IoMdDoneAll } from 'react-icons/io'
 import { RiCloseLine } from 'react-icons/ri'
 import Quantity from '../Quantity/Quantity';
 import { Button, CloseButton, Desc, H1, Image, MoreDetails, Name, Paragraph, Price, Success, Title, Wrapper } from './styles'
@@ -69,8 +70,8 @@ const Card = ({image, title, Mprice, XGprice, Gprice, desc}: Props) => {
                 </>
                 :
                 <Success>
-                  <H1>Parabéns</H1>
-                  <Paragraph>Seu pedido foi realizado com sucesso!</Paragraph>
+                  <H1>Parabéns!</H1>
+                  <Paragraph>Seu pedido foi realizado com sucesso <IoMdDoneAll/></Paragraph>
                 </Success>
                 }
               </MoreDetails>

@@ -137,10 +137,9 @@ export const Success = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 70%;
     background-color: #00070A;
-    border: 2px solid white;
-    border-radius: 20px;
+    border-top: 1px solid white;
     margin-top: 15px;
 `
 
@@ -157,5 +156,9 @@ export const Paragraph = styled.p`
     color: white;
     text-align: center;
     padding: 15px;
+
+    >svg {
+        color: green;
+    }
     
 `
