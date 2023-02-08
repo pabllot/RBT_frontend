@@ -37,3 +37,11 @@ export const AdminIcon = styled.div`
     font-size: 30px;
     color: white;
 `
+
+export const NavLink = styled.a`
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    color: white;
+    font-weight: 300;
+`
